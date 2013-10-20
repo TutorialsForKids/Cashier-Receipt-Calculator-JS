@@ -1,0 +1,2 @@
+Cashier-Receipt-Calculator-JS
+=============================
