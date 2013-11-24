@@ -11,5 +11,7 @@ function new_item(){
      var item = {}; //create item
      item.name = prompt("name of item",""); //enter name of item
      item.price = prompt("price of Item(in pounds)",""); //enter price of item
+     item.quantity = prompt("quantity","");
      add_item(item); //add new item to shopping list
+
 }
