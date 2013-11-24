@@ -4,7 +4,8 @@ var shopping_list = []; //creates a new shopping_list array
 
 function add_item(item){
 	shopping_list.push(item); //pushes shopping_list into array
-	alert(item.name + ' added!'); //alert item added
+	//alert(item.name + ' added!'); //alert item added
+	show_receipt(); //displays receipt
 }
 
 function new_item(){
@@ -16,3 +17,18 @@ function new_item(){
 	add_item(item); //add new item to shopping list
 }
 
+function show_receipt(){
+
+	var receipt_text = "";
+
+	for (i = 0; i < shopping_list.length; i++){
+
+		var item = shopping_list[i];
+
+		receipt_text = receipt_text + item.name + " "
+		+ item.quantity + "@$" + item.price 
+		+ " each. Total = $" + item.totalPrice + "<br/>";
+	}
+
+	document.getElementById('receipt_display').innerHTML = receipt_text;
+}
