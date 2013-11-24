@@ -19,9 +19,10 @@ function new_item(){
 
 function show_receipt(){
 
-	var receipt_text = "";
+	var receipt_text = ""; //creates receipt_text string
 
-	for (i = 0; i < shopping_list.length; i++){
+	//loops the shopping_list array and adds to display
+	for (i = 0; i < shopping_list.length; i++){ 
 
 		var item = shopping_list[i];
 
@@ -30,5 +31,6 @@ function show_receipt(){
 		+ " each. Total = $" + item.totalPrice + "<br/>";
 	}
 
+	//adds to display
 	document.getElementById('receipt_display').innerHTML = receipt_text;
 }
