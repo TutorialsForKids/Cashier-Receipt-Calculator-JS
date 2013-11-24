@@ -12,4 +12,5 @@ function new_item(){
 	item.name = prompt("Name Of Item",""); //enter name of item
 	item.price = prompt("Price of item (in pounds)",""); //enter price of item
 	add_item(item); //add new item to shopping list
+
 }
