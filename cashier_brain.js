@@ -8,8 +8,9 @@ function add_item(item){
 }
 
 function new_item(){
-	var item = {}; //create item
+	var item = {}; //create new object called item
 	item.name = prompt("Name of item",""); //enter name of item
 	item.price = prompt("Price of item (in pounds)",""); //enter price of item
+	item.quantity = prompt("Quantity of item", ""); //enter the number of quantity for this item
 	add_item(item); //add new item to shopping list
 }
