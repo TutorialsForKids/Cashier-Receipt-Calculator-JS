@@ -20,16 +20,24 @@ function new_item(){
 function show_receipt(){
 
 	var receipt_text = ""; //creates receipt_text string
+	var total = 0; 
 
 	//loops the shopping_list array and adds to display
 	for (i = 0; i < shopping_list.length; i++){ 
 
 		var item = shopping_list[i];
+		var totalPriceOfItem = item.totalPrice;
 
 		receipt_text = receipt_text + item.name + " "
 		+ item.quantity + "@$" + item.price 
 		+ " each. Total = $" + item.totalPrice + "<br/>";
+
+		//add item total to running total
+		total = total + totalPriceOfItem;
 	}
+
+	//add total price to display
+	receipt_text = receipt_text + "Total Price of Items is $" + total;
 
 	//adds to display
 	document.getElementById('receipt_display').innerHTML = receipt_text;
