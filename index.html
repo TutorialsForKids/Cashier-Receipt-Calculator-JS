@@ -1,14 +1,43 @@
 <html>
 <head>
 	<title>Cashier Receipt Calculator</title>
-	<script type="text/javascript" src="cashier_brain.js"></script>
+	<script type="text/javascript" src="./jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+
+  <script type="text/javascript" src="./js/cashier_brain.js"></script>
+  <script type="text/javascript" src="./js/listeners.js"></script>
+
 </head>
 <body>
-	<h1>Dilwoar's Cashier Calculator</h1>
-	<p>This is a test receipt for learning how to use calculator</p>
-	<div id="receipt_display"></div>
+	<div class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dilwoar's Cashier Calculator</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#AddNewItem" class="add_new_item"><span class="glyphicon glyphicon-shopping-cart"></span> Add New Item</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
-	<button onClick="new_item();">Add New Item</button>
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Dilwoar's Cashier Calculator</h1>
+        <p>This is a test receipt for learning how to use calculator</p>
+        <div id="receipt_display"></div>
+      </div>
+
+    </div>
 
 </body>
 </html>
