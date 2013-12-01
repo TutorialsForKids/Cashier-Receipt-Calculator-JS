@@ -1,6 +1,6 @@
 //Cashier Reciept Calculator JS
 window.cashier = {}
-	
+
 var shopping_list = []; //creates a new shopping_list array
 
 cashier.add_item = function(item){
@@ -61,4 +61,16 @@ cashier.show_receipt = function(){
 	$('.gross-total').text(total.toFixed(2));
 	$('.vat-total').text(vat.toFixed(2));
 	$('.net-total').text(net_total.toFixed(2));
+
+	//cache list
+	cashier.cacheList();
+}
+
+cashier.cacheList = function(){
+	var json = JSON.stringify(shopping_list);
+	window.localStorage.setItem("basket", json);
+}
+
+cashier.getCacheList = function(){
+	return window.localStorage.getItem('basket');
 }

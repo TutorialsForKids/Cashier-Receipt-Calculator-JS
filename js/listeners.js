@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	cashier.initListeners();
+	shopping_list = ((cashier.getCacheList() != null) ? JSON.parse(cashier.getCacheList()) : []);
+	cashier.show_receipt();
 });
 
 cashier.initListeners = function(){
