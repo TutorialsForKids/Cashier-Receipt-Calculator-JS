@@ -51,6 +51,8 @@ cashier.show_receipt = function(){
 		total = total + totalPriceOfItem;
 	}
 
+	if (!shopping_list.length) receipt_text = '<tr><td colspan="5">No items added to list.</td></tr>';
+
 	var vat = total * 0.25;
 	var net_total = total + vat;
 
