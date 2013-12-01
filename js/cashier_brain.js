@@ -8,8 +8,19 @@ cashier.add_item = function(item){
 	cashier.show_receipt(); //displays receipt
 }
 
+cashier.delete_item = function(id){
+	for (i in shopping_list){
+		if (shopping_list[i].id == id){
+			shopping_list.splice(i, 1);
+			break;
+		}
+	}
+	cashier.show_receipt();
+}
+
 cashier.new_item = function(){
 	var item = {}; //create new object called item
+	item.id = guid();
 	item.name = prompt("Name of item",""); //enter name of item
 	item.price = prompt("Price of item (in pounds)",""); //enter price of item
 	item.quantity = prompt("Quantity of item", ""); //enter the number of quantity for this item
@@ -33,6 +44,7 @@ cashier.show_receipt = function(){
 		receipt_text += "<td>&pound;" + parseFloat(item.price).toFixed(2) + "</td>";
 		receipt_text += "<td>" + item.quantity + "</td>";
 		receipt_text += "<td>&pound;" + parseFloat(item.totalPrice).toFixed(2) + "</td>";
+		receipt_text += "<td><a class='delete_item' data-id="+item.id+"><span class='glyphicon glyphicon-remove'></span></a></td>";
 		receipt_text += "</tr>";
 
 		//add item total to running total
