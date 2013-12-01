@@ -1,0 +1,15 @@
+button.print_receipt, a.delete_item{
+	display: none;
+}
+
+.summary_section div{
+	text-align: right;
+}
+
+.company_info h1{
+	font-size: 25px;
+}
+
+.company_info address{
+	font-size: 15px;
+}
