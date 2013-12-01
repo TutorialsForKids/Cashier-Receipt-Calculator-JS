@@ -69,9 +69,9 @@ cashier.show_receipt = function(){
 
 cashier.cacheList = function(){
 	var json = JSON.stringify(shopping_list);
-	window.localStorage.setItem("basket", json);
+	window.sessionStorage.setItem("basket", json);
 }
 
 cashier.getCacheList = function(){
-	return window.localStorage.getItem('basket');
+	return window.sessionStorage.getItem('basket');
 }
