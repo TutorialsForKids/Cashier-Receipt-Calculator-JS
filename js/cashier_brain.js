@@ -28,17 +28,23 @@ cashier.show_receipt = function(){
 		var item = shopping_list[i];
 		var totalPriceOfItem = item.totalPrice;
 
-		receipt_text += item.name + " ";
-		receipt_text += item.quantity + "@$" + item.price;
-		receipt_text += " each. Total = $" + item.totalPrice + "<br/>";
+		receipt_text += "<tr>";
+		receipt_text += "<td>" + item.name + "</td>";
+		receipt_text += "<td>&pound;" + parseFloat(item.price).toFixed(2) + "</td>";
+		receipt_text += "<td>" + item.quantity + "</td>";
+		receipt_text += "<td>&pound;" + parseFloat(item.totalPrice).toFixed(2) + "</td>";
+		receipt_text += "</tr>";
 
 		//add item total to running total
 		total = total + totalPriceOfItem;
 	}
 
-	//add total price to display
-	receipt_text += "<strong>Total Price of Items is $" + total + "</strong>";
+	var vat = total * 0.25;
+	var net_total = total + vat;
 
 	//adds to display
-	$('#receipt_display').html(receipt_text);
+	$('.item_displays').html(receipt_text);
+	$('.gross-total').text(total.toFixed(2));
+	$('.vat-total').text(vat.toFixed(2));
+	$('.net-total').text(net_total.toFixed(2));
 }

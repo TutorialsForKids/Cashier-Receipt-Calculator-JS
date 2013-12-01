@@ -5,39 +5,64 @@
 	<script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
 
-  <script type="text/javascript" src="./js/cashier_brain.js"></script>
-  <script type="text/javascript" src="./js/listeners.js"></script>
+  	<script type="text/javascript" src="./js/cashier_brain.js"></script>
+  	<script type="text/javascript" src="./js/listeners.js"></script>
+
+  	<link rel="stylesheet" type="text/css" href="./css/main.css">
 
 </head>
 <body>
 	<div class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Dilwoar's Cashier Calculator</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#AddNewItem" class="add_new_item"><span class="glyphicon glyphicon-shopping-cart"></span> Add New Item</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Dilwoar's Cashier Calculator</a>
+		</div>
+		<div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="#AddNewItem" class="add_new_item"><span class="glyphicon glyphicon-shopping-cart"></span> Add New Item</a></li>
+		  </ul>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>
 
-    <div class="container">
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Dilwoar's Cashier Calculator</h1>
-        <p>This is a test receipt for learning how to use calculator</p>
-        <div id="receipt_display"></div>
-      </div>
+	<div class="container">
+	  <!-- Main component for a primary marketing message or call to action -->
+	  <div class="jumbotron">
+		<h1>Dilwoar's Cashier Calculator</h1>
+		<p>This is a test receipt for learning how to use calculator</p>
+	  </div>
 
-    </div>
+	  <div class="receipt_display">
+			<table class="table table-hover">
+				<thead>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Item Total</th>
+				</thead>
+				<tbody class="item_displays">
+					<tr>
+						<td colspan="4">No items added to list.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="pull-right summary_section">
+				<div>Total is <strong>&pound;<span class="gross-total">0.00</span></strong></div>
+				<div>VAT @25% is <strong>&pound;<span class="vat-total">0.00</span></strong></div>
+				<div>Net-total is <strong>&pound;<span class="net-total">0.00</span></strong></div>
+			</div>
+				
+			
+		</div>
+
+	</div>
 
 </body>
 </html>
