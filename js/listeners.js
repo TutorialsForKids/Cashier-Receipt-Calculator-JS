@@ -13,4 +13,8 @@ cashier.initListeners = function(){
 		var id = $(this).data('id');
 		cashier.delete_item(id);
 	});
+
+	$('body').on('click', 'button.print_receipt', function(){
+		window.print();
+	});
 }

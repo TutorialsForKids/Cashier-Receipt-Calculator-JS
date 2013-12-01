@@ -1,0 +1,7 @@
+button.print_receipt, a.delete_item{
+	display: none;
+}
+
+.summary_section div{
+	text-align: right;
+}

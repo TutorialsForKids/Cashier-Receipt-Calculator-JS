@@ -9,8 +9,8 @@
   	<script type="text/javascript" src="./js/listeners.js"></script>
   	<script type="text/javascript" src="./js/utilities.js"></script>
 
-  	<link rel="stylesheet" type="text/css" href="./css/main.css">
-
+	<link rel="stylesheet" type="text/css" href="./css/main.css" media="screen, projection">
+	<link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
 </head>
 <body>
 	<div class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
@@ -33,13 +33,18 @@
 	</div>
 
 	<div class="container">
-	  <!-- Main component for a primary marketing message or call to action -->
-	  <div class="jumbotron">
-		<h1>Dilwoar's Cashier Calculator</h1>
-		<p>This is a test receipt for learning how to use calculator with real life examples.</p>
-	  </div>
+	 	<!-- Main component for a primary marketing message or call to action -->
+	  	<div class="jumbotron company_info">
+			<h1>Dilwoar's Shop</h1>
+			<address>
+				795 Folsom Ave, Suite 600<br>
+				San Francisco, CA 94107<br>
+				<abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+	  	</div>
 
-	  <div class="receipt_display">
+	  	<div class="receipt_display">
+	  		<button class="btn btn-default print_receipt pull-right"><span class="glyphicon glyphicon-print"></span> Print Receipt</button>
 			<table class="table table-hover">
 				<thead>
 					<th>Name</th>
