@@ -17,6 +17,17 @@ function new_item(){
 	add_item(item); //add new item to shopping list
 }
 
+function item_carrots(){
+	var item = {};
+	item.name = 'carrot';
+	item.price = '1.50';
+	item.quantity = prompt("Quantity of item", "");
+	item.totalPrice = item.price * item.quantity;
+	add_item(item);
+	alert('added item');
+}
+
+
 function show_receipt(){
 
 	var receipt_text = ""; //creates receipt_text string
@@ -29,15 +40,15 @@ function show_receipt(){
 		var totalPriceOfItem = item.totalPrice;
 
 		receipt_text = receipt_text + item.name + " "
-		+ item.quantity + "@$" + item.price 
-		+ " each. Total = $" + item.totalPrice + "<br/>";
+		+ item.quantity + "@&#163;" + item.price 
+		+ " each. Total = &#163;" + item.totalPrice + "<br/>";
 
 		//add item total to running total
 		total = total + totalPriceOfItem;
 	}
 
 	//add total price to display
-	receipt_text = receipt_text + "Total Price of Items is $" + total;
+	receipt_text = receipt_text + "Total Price of Items is &#163;" + total;
 
 	//adds to display
 	document.getElementById('receipt_display').innerHTML = receipt_text;
