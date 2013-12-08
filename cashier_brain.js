@@ -18,3 +18,27 @@ function new_item(){
      add_item(item); //add new item to shopping list
 
 }
+
+function show_receipt(){
+     var receipt_text = "";
+     var runningtotal= 0;
+     for (i = 0; i < shopping_list.length; i++){
+
+     	var item = shopping_list[i];
+
+     	receipt_text = receipt_text + item.name + " "
+     	+ item.quantity + "@&#163;"+ item.price;
+     	+ " each. Total = @&#163;" + item.totalprice + "<br/>";
+          runningtotal= runningtotal + item.totalprice;
+          
+
+     }
+
+     console.log(receipt_text);
+
+     receipt_text =receipt_text + "Total price is @&#163;" + runningtotal;
+     
+
+     document.getElementById('receipt_display').innerHTML = receipt_text;
+}
+ 
