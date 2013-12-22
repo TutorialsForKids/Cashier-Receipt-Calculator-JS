@@ -19,6 +19,15 @@ function new_item(){
 
 }
 
+function addbutton_item(name, price){
+     var item = {};
+     item.name= name;
+     item.price= price;
+     item.quantity= prompt("quantity of Item","");
+     item.totalprice = item.price * item.quantity;
+      add_item(item);
+}
+
 function show_receipt(){
      var receipt_text = "";
      var runningtotal= 0;
@@ -41,4 +50,3 @@ function show_receipt(){
 
      document.getElementById('receipt_display').innerHTML = receipt_text;
 }
- 
